@@ -19,12 +19,18 @@
   text-align: center;
   margin: 0;
 }
+
+.date-arrows {
+  flex: 1;
+  text-align: center;
+  margin-top: 30px;
+}
       
       .container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 50px;
+        padding-top: 25px;
       }
       
       .box {
@@ -46,7 +52,7 @@
         background-color: white;
         border-radius: 20px;
         padding: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 100px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
         height: 300px;
       }
@@ -140,7 +146,35 @@
   color: #666;
 }
 
-img {
+
+.prev-date{
+  font-size: 35px;
+  color: #333;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-bottom: 50px;
+}
+
+.date {
+vertical-align: middle;
+}
+
+.prev-date:hover {
+  color: #666;
+}
+
+.next-date{
+  font-size: 35px;
+  color: #333;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.next-date:hover {
+  color: #666;
+}
+
+.bar-graph-img {
   margin-top: 30px;
   width: 420px;
   height: auto;
@@ -157,6 +191,49 @@ img {
   left: 15px;
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #147EFB;
+    border-top: 1px solid #ccc;
+  }
+
+  .icon-box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  background-color: white;
+  display: inline-block;
+  margin: 30px;
+  margin-top: 15px;
+}
+
+.icon1 {
+  background-image: url('health.png');
+  background-size: 95%;
+  background-position: center;
+}
+
+.icon2 {
+  background-image: url('plan.png');
+  background-size: 95%;
+  background-position: center;
+}
+
+.icon3 {
+  background-image: url('home.png');
+  background-size: 95%;
+  background-position: center;
+}
+
+
+
  
     </style>
   </head>
@@ -167,6 +244,11 @@ img {
         <h1>Nutrition</h1>
       </div>
     </header>
+    <div class="date-arrows">
+    <a href="#" class="prev-date">&#8592;</a>
+    <span class="date" style="font-size: 25px;">04/05/2023</span>
+    <a href="#" class="next-date">&#8594;</a>
+  </div>
     <div class="container">
       <div class="box">
         <h2 class="header-text">|calorie intake</h2>
@@ -197,9 +279,14 @@ img {
       </div>
       <div class="box2">
         <h2 class="header-text">|calorie stats</h2>
-          <img src="bar-graph.png" alt="calorie bar graph">     
+          <img class="bar-graph-img"src="bar-graph.png" alt="calorie bar graph">     
       </div>
     </div>
     <script src="nutrition.js"></script>
+    <div class="footer">
+      <div class="icon-box icon1"></div>
+      <div class="icon-box icon2"></div>
+      <div class="icon-box icon3"></div>    
+    </div>    
   </body>
 </html>
