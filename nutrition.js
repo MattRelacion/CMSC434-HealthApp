@@ -1,11 +1,11 @@
-const addButton = document.querySelector('.add-button');
-const container = document.querySelector('.container');
-const box = document.querySelector('.box');
-
 addButton.addEventListener('click', () => {
   const row = document.createElement('div');
   row.classList.add('row');
-  
+
+  const removeButton = document.createElement('button');
+  removeButton.classList.add('remove-button');
+  removeButton.innerHTML = '&#10006;';
+
   const foodNameInput = document.createElement('input');
   foodNameInput.type = 'text';
   foodNameInput.placeholder = 'Food Name';
@@ -27,6 +27,7 @@ addButton.addEventListener('click', () => {
   caloriesInput.name = 'calories';
   caloriesInput.classList.add('textbox');
 
+  row.appendChild(removeButton);
   row.appendChild(foodNameInput);
   row.appendChild(servingsInput);
   row.appendChild(equalsSign);
