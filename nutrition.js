@@ -1,20 +1,38 @@
-// Get references to the HTML elements
-const foodNameInput = document.getElementById("foodName");
-const servingsInput = document.getElementById("servings");
-const caloriesInput = document.getElementById("calories");
+const addButton = document.querySelector('.add-button');
+const container = document.querySelector('.container');
+const box = document.querySelector('.box');
 
-// Add an event listener to the food name input field
-foodNameInput.addEventListener("input", function(event) {
-  console.log("Food name changed:", event.target.value);
+addButton.addEventListener('click', () => {
+  const row = document.createElement('div');
+  row.classList.add('row');
+  
+  const foodNameInput = document.createElement('input');
+  foodNameInput.type = 'text';
+  foodNameInput.placeholder = 'Food Name';
+  foodNameInput.name = 'foodName';
+  foodNameInput.classList.add('textbox');
+
+  const servingsInput = document.createElement('input');
+  servingsInput.type = 'text';
+  servingsInput.placeholder = 'Servings';
+  servingsInput.name = 'servings';
+  servingsInput.classList.add('textbox');
+
+  const equalsSign = document.createElement('span');
+  equalsSign.textContent = '=';
+
+  const caloriesInput = document.createElement('input');
+  caloriesInput.type = 'text';
+  caloriesInput.placeholder = 'Calories';
+  caloriesInput.name = 'calories';
+  caloriesInput.classList.add('textbox');
+
+  row.appendChild(foodNameInput);
+  row.appendChild(servingsInput);
+  row.appendChild(equalsSign);
+  row.appendChild(caloriesInput);
+
+  box.appendChild(row);
+
+  box.style.height = parseInt(getComputedStyle(box).height) + 50 + 'px';
 });
-
-// Add an event listener to the servings input field
-servingsInput.addEventListener("input", function(event) {
-  console.log("Servings changed:", event.target.value);
-});
-
-// Add an event listener to the calories input field
-caloriesInput.addEventListener("input", function(event) {
-  console.log("Calories changed:", event.target.value);
-});
-
