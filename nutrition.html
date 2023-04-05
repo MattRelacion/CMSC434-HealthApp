@@ -15,19 +15,22 @@
       }
       
       h1 {
-        text-align: center;
-        background-color: white;
-        padding: 20px;
-        margin: 0;
-        font-size: 36px;
-        line-height: 1;
-      }
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.date-arrows {
+  flex: 1;
+  text-align: center;
+  margin-top: 30px;
+}
       
       .container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 50px;
+        padding-top: 25px;
       }
       
       .box {
@@ -49,12 +52,13 @@
         background-color: white;
         border-radius: 20px;
         padding: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 100px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
         height: 300px;
       }
       
       .box:first-child {
+        padding-top: 25px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -105,6 +109,10 @@
         cursor: pointer;
       }
 
+      .add-button:hover {
+  color: #666;
+}
+
       .delete-button {
         border: none;
         background-color: transparent;
@@ -114,35 +122,136 @@
         margin-right: 5px;
       }
 
+      .delete-button:hover {
+  color: black;
+}
+
       header {
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 80px;
-  background-color: #f1f1f1;
-  padding: 0 20px;
 }
 
 .back-arrow {
   font-size: 35px;
   color: #333;
   text-decoration: none;
-  margin-left: 35px;
 }
 
 .back-arrow:hover {
   color: #666;
 }
-      
+
+
+.prev-date{
+  font-size: 35px;
+  color: #333;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-bottom: 50px;
+}
+
+.date {
+vertical-align: middle;
+}
+
+.prev-date:hover {
+  color: #666;
+}
+
+.next-date{
+  font-size: 35px;
+  color: #333;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.next-date:hover {
+  color: #666;
+}
+
+.bar-graph-img {
+  margin-top: 30px;
+  width: 420px;
+  height: auto;
+}
+
+.header-text {
+  color: #147EFB;
+  font-family: 'Open Sans Light', sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding-top: 10px;
+  position: absolute;
+  top: 5px;
+  left: 15px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #147EFB;
+    border-top: 1px solid #ccc;
+  }
+
+  .icon-box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  background-color: white;
+  display: inline-block;
+  margin: 30px;
+  margin-top: 15px;
+}
+
+.icon1 {
+  background-image: url('health.png');
+  background-size: 95%;
+  background-position: center;
+}
+
+.icon2 {
+  background-image: url('plan.png');
+  background-size: 95%;
+  background-position: center;
+}
+
+.icon3 {
+  background-image: url('home.png');
+  background-size: 95%;
+  background-position: center;
+}
+
+
+
+ 
     </style>
-    <script src="nutrition.js"></script>
   </head>
   <body>
-    <a href="#" class="back-arrow">&#8592;</a>
-    <h1>Nutrition</h1>
-    
+    <header>
+      <div class="header-container">
+        <a href="#" class="back-arrow">&#8592;</a>
+        <h1>Nutrition</h1>
+      </div>
+    </header>
+    <div class="date-arrows">
+    <a href="#" class="prev-date">&#8592;</a>
+    <span class="date" style="font-size: 25px;">04/05/2023</span>
+    <a href="#" class="next-date">&#8594;</a>
+  </div>
     <div class="container">
       <div class="box">
+        <h2 class="header-text">|calorie intake</h2>
         <button class="add-button">&#43;</button>
         <div class="rows-container">
           <div class="row">
@@ -169,8 +278,15 @@
       </div>
       </div>
       <div class="box2">
+        <h2 class="header-text">|calorie stats</h2>
+          <img class="bar-graph-img"src="bar-graph.png" alt="calorie bar graph">     
       </div>
     </div>
     <script src="nutrition.js"></script>
+    <div class="footer">
+      <div class="icon-box icon1"></div>
+      <div class="icon-box icon2"></div>
+      <div class="icon-box icon3"></div>    
+    </div>    
   </body>
 </html>
