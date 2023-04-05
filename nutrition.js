@@ -1,5 +1,6 @@
 const addButton = document.querySelector('.add-button');
 const container = document.querySelector('.container');
+const box = document.querySelector('.box');
 
 addButton.addEventListener('click', () => {
   const row = document.createElement('div');
@@ -28,5 +29,7 @@ addButton.addEventListener('click', () => {
   row.appendChild(equalsSign);
   row.appendChild(caloriesInput);
 
-  container.appendChild(row);
+  container.insertBefore(row, box.nextSibling);
+
+  box.style.height = parseInt(getComputedStyle(box).height) + 50 + 'px';
 });
