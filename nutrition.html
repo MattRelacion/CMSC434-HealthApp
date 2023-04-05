@@ -15,13 +15,10 @@
       }
       
       h1 {
-        text-align: center;
-        background-color: white;
-        padding: 20px;
-        margin: 0;
-        font-size: 36px;
-        line-height: 1;
-      }
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
       
       .container {
         display: flex;
@@ -105,6 +102,10 @@
         cursor: pointer;
       }
 
+      .add-button:hover {
+  color: #666;
+}
+
       .delete-button {
         border: none;
         background-color: transparent;
@@ -114,20 +115,24 @@
         margin-right: 5px;
       }
 
+      .delete-button:hover {
+  color: black;
+}
+
       header {
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 80px;
-  background-color: #f1f1f1;
-  padding: 0 20px;
 }
 
 .back-arrow {
   font-size: 35px;
   color: #333;
   text-decoration: none;
-  margin-left: 35px;
 }
 
 .back-arrow:hover {
@@ -135,12 +140,14 @@
 }
       
     </style>
-    <script src="nutrition.js"></script>
   </head>
   <body>
-    <a href="#" class="back-arrow">&#8592;</a>
-    <h1>Nutrition</h1>
-    
+    <header>
+      <div class="header-container">
+        <a href="#" class="back-arrow">&#8592;</a>
+        <h1>Nutrition</h1>
+      </div>
+    </header>
     <div class="container">
       <div class="box">
         <button class="add-button">&#43;</button>
