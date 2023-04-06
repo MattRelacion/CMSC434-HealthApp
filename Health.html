@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+      body {
+        background-color: #ececec;
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans Light', sans-serif;
+        font-weight: 300;
+      }
+      h1 {
+        flex: 1;
+        text-align: center;
+        margin: 0;
+      }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding-bottom: 80px; /* Add padding equal to the height of the footer */
+
+    }
+    
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        color: #147EFB;
+        font-family: 'Open Sans Light', sans-serif;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        font-size: 20px;
+        width: 200px;
+        cursor: pointer; /* add cursor pointer to indicate clickable element */
+      }
+      .box:hover {
+      background-color: #f0f0f0;
+      cursor: pointer;
+      }
+
+    .box:active {
+      background-color: #e0e0e0;
+      box-shadow: none;
+    }
+    .box p {
+    color: black; 
+    font-size: 16px;
+    margin-top: 50px; /* add some space between the heading and the paragraph */
+    margin-top: auto; /* push the paragraph to the bottom */
+    }
+    header {
+    background-color: white;
+    padding: 10px 20px;
+    }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    }
+
+  .back-arrow {
+    font-size: 35px;
+    color: #333;
+    text-decoration: none;
+    }
+
+  .back-arrow:hover {
+    color: #666;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #147EFB;
+    border-top: 1px solid #ccc;
+    
+  }
+
+  .icon-box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  background-color: white;
+  display: inline-block;
+  margin: 30px;
+  margin-top: 15px;
+}
+
+.icon1 {
+  background-image: url('health.png');
+  background-size: 95%;
+  background-position: center;
+  cursor: pointer; /* add cursor pointer to indicate clickable element */
+}
+
+.icon2 {
+  background-image: url('plan.png');
+  background-size: 95%;
+  background-position: center;
+  cursor: pointer; /* add cursor pointer to indicate clickable element */
+}
+
+.icon3 {
+  background-image: url('home.png');
+  background-size: 95%;
+  background-position: center;
+  cursor: pointer; /* add cursor pointer to indicate clickable element */
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="#" class="back-arrow">&#8592;</a>
+      <h1>Health</h1>
+    </div>
+  </header>
+  <div class="container">
+    <div class="box">
+    <div>Nutrition</div>
+    </div>
+    <div class="box">
+      Sleep
+      <p>8hrs of Sleep Last Night</p>
+    </div>
+    <div class="box">
+      Steps
+      <p>11,998 Steps</p>
+
+    </div>
+    <div class="box">
+      Heart Rate
+      <p>63 BPM</p>
+    </div>
+  </div>
+  <script src="HomeScreen.js"></script>
+    <div class="footer">
+      <div class="icon-box icon1"></div>
+      <div class="icon-box icon2"></div>
+      <div class="icon-box icon3"></div>    
+    </div>
+    
+</body>
+</html>
