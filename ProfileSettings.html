@@ -4,11 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ProfileSettings</title>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+      
       body {
         background-color: #ececec;
         margin: 0;
         padding: 0;
-        
+        font-family: 'Open Sans Light', sans-serif;
+        font-weight: 300;
       }
       .container {
         display: flex;
@@ -120,9 +123,86 @@
         color: #999;
       }
 
+      /*
+       Start to common code amoung tabs
+      */
+      header {
+        background-color: white;
+        padding: 10px 20px;
+      }
+
+      .header-container {
+        display: flex;
+        align-items: center;
+      }
+
+      header h1 {
+        text-align: center;
+      }
+
+      .back-arrow {
+        font-size: 35px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .back-arrow:hover {
+        color: #666;
+      }
+      .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        color: #147EFB;
+        border-top: 1px solid #ccc;
+      }
+      .icon-box {
+        width: 50px;
+        height: 50px;
+        border: 2px solid black;
+        background-color: white;
+        display: inline-block;
+        margin: 30px;
+        margin-top: 15px;
+      }
+
+      .icon1 {
+        background-image: url('health.png');
+        background-size: 95%;
+        background-position: center;
+      }
+
+      .icon2 {
+        background-image: url('plan.png');
+        background-size: 95%;
+        background-position: center;
+      }
+
+      .icon3 {
+        background-image: url('home.png');
+        background-size: 95%;
+        background-position: center;
+      }
+
+
+      /*
+       End to the style portion of common code amoung tabs
+      */
     </style>
   </head>
   <body>
+    <header>
+      <div class="header-container">
+        <a href="#" class="back-arrow">&#8592;</a>
+        <h1>Profile Settings</h1>
+      </div>
+    </header>
+    
     <div class="container">
       <div class="box">
         <div class="lul">
@@ -169,5 +249,10 @@
       -->
       </div>      
     </div>
+    <div class="footer">
+      <div class="icon-box icon1"></div>
+      <div class="icon-box icon2"></div>
+      <div class="icon-box icon3"></div>    
+    </div> 
   </body>
 </html>
