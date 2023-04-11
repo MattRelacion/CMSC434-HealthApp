@@ -25,9 +25,14 @@
       align-items: center;
       height: 100vh;
       padding-bottom: 80px; /* Add padding equal to the height of the footer */
+      margin-top: -80px;
 
     }
     
+    html {
+      overflow-y: hidden;
+    }
+
     .box {
       width: 200px;
       height: 200px;
@@ -129,14 +134,14 @@
 <body>
   <header>
     <div class="header-container">
-      <h1>Health</h1>
+      <h1>Home Screen</h1>
     </div>
   </header>
   <div class="container">
-    <div class="box">
+    <div onclick="window.location.href='Health.html'" class="box">
     <div>| Heath</div>
     </div>
-    <div class="box">
+    <div onclick="window.location.href='SelectPlan.html'" class="box">
       | Exercise
       
     </div>
@@ -144,7 +149,7 @@
       | Goals
       <img src="Please Work.png" alt="Goal Image">
     </div>
-    <div class="box">
+    <div onclick="window.location.href='ProfileSettings.html'" class="box">
       | Account
     </div>
   </div>

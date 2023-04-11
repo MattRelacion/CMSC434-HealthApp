@@ -30,7 +30,7 @@
         margin-bottom: 20px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
       }
-      .lul{
+      .profileDiv {
         display: flex;
         flex-direction: column;
       }
@@ -133,7 +133,10 @@
 
       .header-container {
         display: flex;
-        align-items: center;
+      }
+
+      .center-header-text {
+        margin: auto;
       }
 
       header h1 {
@@ -198,14 +201,14 @@
   <body>
     <header>
       <div class="header-container">
-        <a href="#" class="back-arrow">&#8592;</a>
-        <h1>Profile Settings</h1>
+        <a href="#" onclick="window.location.href='HomeScreen.html'" class="back-arrow">&#8592;</a>
+        <h1 class="center-header-text">Profile Settings</h1>
       </div>
     </header>
     
     <div class="container">
       <div class="box">
-        <div class="lul">
+        <div class="profileDiv">
           <img src="./ProfilePhoto.png" alt="Profile Picture">
           <div class="uploadPhoto">
             <p>Upload Photo</p>

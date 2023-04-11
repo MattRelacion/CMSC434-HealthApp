@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My App</title>
+	<style>
+		#splash-screen {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 9999;
+		}
+	</style>
+</head>
+<body>
+	<div id="splash-screen">
+		<object data="Splash.html" type="text/html"></object>
+	</div>
+	<script>
+		setTimeout(function() {
+			window.location.href = "HomeScreen.html";
+		}, 3000); // set the timeout value to how long you want the splash screen to display, in milliseconds
+	</script>
+</body>
+</html>

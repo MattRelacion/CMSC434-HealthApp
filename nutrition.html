@@ -1,292 +1,291 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nutrition</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
-      
-      body {
-        background-color: #ececec;
-        margin: 0;
-        padding: 0;
-        font-family: 'Open Sans Light', sans-serif;
-        font-weight: 300;
-      }
-      
-      h1 {
-  flex: 1;
-  text-align: center;
-  margin: 0;
-}
 
-.date-arrows {
-  flex: 1;
-  text-align: center;
-  margin-top: 30px;
-}
-      
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 25px;
-      }
-      
-      .box {
-        position: relative;
-        width: 90%;
-        max-width: 400px;
-        background-color: white;
-        border-radius: 20px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-        height: auto 0.5s ease
-      }
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nutrition</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
-      .box2 {
-        position: relative;
-        width: 90%;
-        max-width: 400px;
-        background-color: white;
-        border-radius: 20px;
-        padding: 20px;
-        margin-bottom: 100px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-        height: 300px;
-      }
-      
-      .box:first-child {
-        padding-top: 25px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-      
-      .row {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
-      }
-      
-      input[type="text"] {
-        width: 42%;
-        height: 20px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid black;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-        font-family: 'Open Sans Light', sans-serif;
-        font-weight: 300;
-        font-size: 14px;
-        margin-right: 10px;
-        margin-left: 10px;
-      }
-      
-      .equal-sign {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        font-weight: 300;
-        width: 4%;
-        height: 35px;
-        margin-right: 10px;
-        margin-left: 10px;
-      }
-      
-      .add-button {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        border: none;
-        background-color: transparent;
-        font-size: 20px;
-        color: black;
-        cursor: pointer;
-      }
+    body {
+      background-color: #ececec;
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans Light', sans-serif;
+      font-weight: 300;
+    }
 
-      .add-button:hover {
-  color: #666;
-}
+    h1 {
+      flex: 1;
+      text-align: center;
+      margin: 0;
+    }
 
-      .delete-button {
-        border: none;
-        background-color: transparent;
-        font-size: 15px;
-        color: grey;
-        cursor: pointer;
-        margin-right: 5px;
-      }
+    .date-arrows {
+      flex: 1;
+      text-align: center;
+      margin-top: 30px;
+    }
 
-      .delete-button:hover {
-  color: black;
-}
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 25px;
+    }
 
-header {
-  background-color: white;
-  padding: 10px 20px;
-}
+    .box {
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      background-color: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      height: auto 0.5s ease
+    }
 
-.header-container {
-  display: flex;
-  align-items: center;
-}
+    .box2 {
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      background-color: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 100px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      height: 300px;
+    }
 
-.back-arrow {
-  font-size: 35px;
-  color: #333;
-  text-decoration: none;
-}
+    .box:first-child {
+      padding-top: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-.back-arrow:hover {
-  color: #666;
-}
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
 
+    input[type="text"] {
+      width: 42%;
+      height: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid black;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+      font-family: 'Open Sans Light', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
 
-.prev-date{
-  font-size: 35px;
-  color: #333;
-  text-decoration: none;
-  vertical-align: middle;
-  margin-bottom: 50px;
-}
+    .equal-sign {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 300;
+      width: 4%;
+      height: 35px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
 
-.date {
-vertical-align: middle;
-}
+    .add-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      border: none;
+      background-color: transparent;
+      font-size: 20px;
+      color: black;
+      cursor: pointer;
+    }
 
-.prev-date:hover {
-  color: #666;
-}
+    .add-button:hover {
+      color: #666;
+    }
 
-.next-date{
-  font-size: 35px;
-  color: #333;
-  text-decoration: none;
-  vertical-align: middle;
-}
+    .delete-button {
+      border: none;
+      background-color: transparent;
+      font-size: 15px;
+      color: grey;
+      cursor: pointer;
+      margin-right: 5px;
+    }
 
-.next-date:hover {
-  color: #666;
-}
+    .delete-button:hover {
+      color: black;
+    }
 
-.bar-graph-img {
-  margin-top: 30px;
-  width: 420px;
-  height: auto;
-}
+    header {
+      background-color: white;
+      padding: 10px 20px;
+    }
 
-.header-text {
-  color: #147EFB;
-  font-family: 'Open Sans Light', sans-serif;
-  font-size: 15px;
-  margin: 0;
-  padding-top: 10px;
-  position: absolute;
-  top: 5px;
-  left: 15px;
-}
+    .header-container {
+      display: flex;
+      align-items: center;
+    }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 80px;
-    background-color: white;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
-    color: #147EFB;
-    border-top: 1px solid #ccc;
-  }
+    .back-arrow {
+      font-size: 35px;
+      color: #333;
+      text-decoration: none;
+    }
 
-  .icon-box {
-    width: 50px;
-    height: 50px;
-    border: 2px solid black;
-    background-color: white;
-    display: inline-block;
-    margin: 30px;
-    margin-top: 15px;
-  }
-
-.icon1 {
-  background-image: url('health.png');
-  background-size: 95%;
-  background-position: center;
-}
-
-.icon2 {
-  background-image: url('plan.png');
-  background-size: 95%;
-  background-position: center;
-}
-
-.icon3 {
-  background-image: url('home.png');
-  background-size: 95%;
-  background-position: center;
-}
+    .back-arrow:hover {
+      color: #666;
+    }
 
 
+    .prev-date {
+      font-size: 35px;
+      color: #333;
+      text-decoration: none;
+      vertical-align: middle;
+      margin-bottom: 50px;
+    }
 
- 
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="header-container">
-        <a href="#" class="back-arrow">&#8592;</a>
-        <h1>Nutrition</h1>
-      </div>
-    </header>
-    <div class="date-arrows">
+    .date {
+      vertical-align: middle;
+    }
+
+    .prev-date:hover {
+      color: #666;
+    }
+
+    .next-date {
+      font-size: 35px;
+      color: #333;
+      text-decoration: none;
+      vertical-align: middle;
+    }
+
+    .next-date:hover {
+      color: #666;
+    }
+
+    .bar-graph-img {
+      margin-top: 30px;
+      width: 420px;
+      height: auto;
+    }
+
+    .header-text {
+      color: #147EFB;
+      font-family: 'Open Sans Light', sans-serif;
+      font-size: 15px;
+      margin: 0;
+      padding-top: 10px;
+      position: absolute;
+      top: 5px;
+      left: 15px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      background-color: white;
+      text-align: center;
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+      color: #147EFB;
+      border-top: 1px solid #ccc;
+    }
+
+    .icon-box {
+      width: 50px;
+      height: 50px;
+      border: 2px solid black;
+      background-color: white;
+      display: inline-block;
+      margin: 30px;
+      margin-top: 15px;
+    }
+
+    .icon1 {
+      background-image: url('health.png');
+      background-size: 95%;
+      background-position: center;
+    }
+
+    .icon2 {
+      background-image: url('plan.png');
+      background-size: 95%;
+      background-position: center;
+    }
+
+    .icon3 {
+      background-image: url('home.png');
+      background-size: 95%;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <a href="#" onclick="window.location.href='Health.html'" class="back-arrow">&#8592;</a>
+      <h1>Nutrition</h1>
+    </div>
+  </header>
+  <div class="date-arrows">
     <a href="#" class="prev-date">&#8592;</a>
     <span class="date" style="font-size: 25px;">04/05/2023</span>
     <a href="#" class="next-date">&#8594;</a>
   </div>
-    <div class="container">
-      <div class="box">
-        <h2 class="header-text">|calorie intake</h2>
-        <button class="add-button">&#43;</button>
-        <div class="rows-container">
-          <div class="row">
-            <div class="delete-button">X</div>
-            <input type="text" placeholder="Food Name" id="foodName" name="foodName">
-            <input type="text" placeholder="Servings" id="servings" name="servings">
-            <span class="equal-sign">=</span>
-            <input type="text" placeholder="Calories" id="calories" name="calories">
-          </div>
-          <div class="row">
-            <div class="delete-button">X</div>
-            <input type="text" placeholder="Food Name" id="foodName" name="foodName">
-            <input type="text" placeholder="Servings" id="servings" name="servings">
-            <span class="equal-sign">=</span>
-            <input type="text" placeholder="Calories" id="calories" name="calories">
-          </div>
-          <div class="row">
-            <div class="delete-button">X</div>
-            <input type="text" placeholder="Food Name" id="foodName" name="foodName">
-            <input type="text" placeholder="Servings" id="servings" name="servings">
-            <span class="equal-sign">=</span>
-            <input type="text" placeholder="Calories" id="calories" name="calories">
-          </div>
-      </div>
-      </div>
-      <div class="box2">
-        <h2 class="header-text">|calorie stats</h2>
-          <img class="bar-graph-img"src="bar-graph.png" alt="calorie bar graph">     
+  <div class="container">
+    <div class="box">
+      <h2 class="header-text">|calorie intake</h2>
+      <button class="add-button">&#43;</button>
+      <div class="rows-container">
+        <div class="row">
+          <div class="delete-button">X</div>
+          <input type="text" placeholder="Food Name" id="foodName" name="foodName">
+          <input type="text" placeholder="Servings" id="servings" name="servings">
+          <span class="equal-sign">=</span>
+          <input type="text" placeholder="Calories" id="calories" name="calories">
+        </div>
+        <div class="row">
+          <div class="delete-button">X</div>
+          <input type="text" placeholder="Food Name" id="foodName" name="foodName">
+          <input type="text" placeholder="Servings" id="servings" name="servings">
+          <span class="equal-sign">=</span>
+          <input type="text" placeholder="Calories" id="calories" name="calories">
+        </div>
+        <div class="row">
+          <div class="delete-button">X</div>
+          <input type="text" placeholder="Food Name" id="foodName" name="foodName">
+          <input type="text" placeholder="Servings" id="servings" name="servings">
+          <span class="equal-sign">=</span>
+          <input type="text" placeholder="Calories" id="calories" name="calories">
+        </div>
       </div>
     </div>
-    <script src="nutrition.js"></script>
-    <div class="footer">
-      <div class="icon-box icon1"></div>
-      <div class="icon-box icon2"></div>
-      <div class="icon-box icon3"></div>    
-    </div>    
-  </body>
+    <div class="box2">
+      <h2 class="header-text">|calorie stats</h2>
+      <img class="bar-graph-img" src="bar-graph.png" alt="calorie bar graph">
+    </div>
+  </div>
+  <script src="nutrition.js"></script>
+  <div class="footer">
+    <div class="icon-box icon1"></div>
+    <div class="icon-box icon2"></div>
+    <div class="icon-box icon3"></div>
+  </div>
+</body>
+
 </html>
