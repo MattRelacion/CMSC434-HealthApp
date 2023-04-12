@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Health</title>
+  <title>Home Screen</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
@@ -18,27 +18,30 @@
         text-align: center;
         margin: 0;
       }
+      /* display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 25px; */
     .container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      padding-bottom: 80px; /* Add padding equal to the height of the footer */
-      margin-top: -80px;
+      padding-top: 25px;
 
     }
     
     html {
-      overflow-y: hidden;
     }
 
     .box {
-      width: 200px;
+    
+      width: 200%;
       height: 200px;
       background-color: white;
       color: #147EFB;
       font-family: 'Open Sans Light', sans-serif;
+      font-size: 100;
       margin: 10px;
       display: flex;
       flex-direction: column;
@@ -46,9 +49,9 @@
       padding: 20px;
       margin-bottom: 20px;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-      font-size: 20px;
+      font-size: 24px;
       width: 200px;
-      cursor: pointer; /* add cursor pointer to indicate clickable element */
+      cursor: pointer;
     }
       .box:hover {
       background-color: #f0f0f0;
@@ -64,13 +67,13 @@
     font-size: 16px;
     margin-top: 50px; /* add some space between the heading and the paragraph */
     margin-top: auto; /* push the paragraph to the bottom */
+    align-items: center;
     }
     .box img {
-    position: re
-    ;
     width: 50%;
     margin-top: 20px;
-    
+    margin: 34px auto 0 ;
+    display: block;
     }
     header {
     background-color: white;
@@ -113,21 +116,21 @@
   background-image: url('health.png');
   background-size: 95%;
   background-position: center;
-  cursor: pointer; /* add cursor pointer to indicate clickable element */
+  cursor: pointer;
 }
 
 .icon2 {
   background-image: url('plan.png');
   background-size: 95%;
   background-position: center;
-  cursor: pointer; /* add cursor pointer to indicate clickable element */
+  cursor: pointer;
 }
 
 .icon3 {
   background-image: url('home.png');
   background-size: 95%;
   background-position: center;
-  cursor: pointer; /* add cursor pointer to indicate clickable element */
+  cursor: pointer; 
 }
   </style>
 </head>
@@ -140,10 +143,11 @@
   <div class="container">
     <div onclick="window.location.href='Health.html'" class="box">
     <div>| Heath</div>
+    <img src="heart-beat.png" alt="Goal Image">
     </div>
     <div onclick="window.location.href='SelectPlan.html'" class="box">
       | Exercise
-      
+      <img src="running.png" alt="Goal Image">
     </div>
     <div class="box">
       | Goals
@@ -151,6 +155,8 @@
     </div>
     <div onclick="window.location.href='ProfileSettings.html'" class="box">
       | Account
+      <img src="ProfilePhoto.png" alt="Goal Image">
+
     </div>
   </div>
   <script src="HomeScreen.js"></script>
